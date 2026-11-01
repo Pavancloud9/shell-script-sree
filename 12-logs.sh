@@ -5,7 +5,7 @@ LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
-echo "Script started executing at: $TIMESTAMP" &>>LOG_FILE_NAME
+echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 USERID=$(id -u)
 
@@ -25,7 +25,7 @@ VALIDATE(){
     fi
 } 
 
-dnf list installed mysql &>>LOG_FILE_NAME
+dnf list installed mysql &>>$LOG_FILE_NAME
 if [ $? -ne 0 ]   #### NOT INSTALLED
 then
     dnf install mysql -y
@@ -36,7 +36,7 @@ else
 fi
 
 
-dnf list installed git &>>LOG_FILE_NAME
+dnf list installed git &>>$LOG_FILE_NAME
 if [ $? -ne 0 ]   #### NOT INSTALLED
 then
     dnf install git -y
