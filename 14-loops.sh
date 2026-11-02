@@ -6,13 +6,12 @@
 # done
 
 VALIDATE(){
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
 then
-    echo "Installing $INSTALL_SOFTWARE.....FAILURE"
+    echo "Installing $2....FAILURE"
 else
-    echo "Installing $INSTALL_SOFTWARE.....SUCCESS"
+    echo "Installing $2....SUCCESS"
 fi
-
 }
 
 for INSTALL_SOFTWARE in $@
