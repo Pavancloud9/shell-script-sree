@@ -20,7 +20,7 @@ do
     if [ $? -ne 0 ]
 then
     dnf install $INSTALL_SOFTWARE -y
-    VALIDATE $? "Installing $INSTALL_SOFTWARE
+    VALIDATE $? "Installing $INSTALL_SOFTWARE"
 else
     echo "$INSTALL_SOFTWARE ....ALREADY INSTALLED"
 fi
