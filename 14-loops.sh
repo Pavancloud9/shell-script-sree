@@ -22,6 +22,6 @@ then
     dnf install $INSTALL_SOFTWARE -y
     VALIDATE $? "Installing $INSTALL_SOFTWARE
 else
-    echo "Installing $INSTALL_SOFTWARE....ALREADY INSTALLED"
+    echo "$INSTALL_SOFTWARE ....ALREADY INSTALLED"
 fi
 done
