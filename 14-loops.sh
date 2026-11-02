@@ -10,7 +10,7 @@ do
     dnf list installed $INSTALL_SOFTWARE
     if [ $? -ne 0 ]
 then
-    dnf install $INSTALL_SOFTWARE
+    dnf install $INSTALL_SOFTWARE -y
     if [ $? -ne 0 ]
 then
     echo "Installing $INSTALL_SOFTWARE.....FAILURE"
