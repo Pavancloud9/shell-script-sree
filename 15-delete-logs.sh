@@ -9,4 +9,4 @@ echo "Files older than 14days are:: $FILES_TO_DELETE"
 while read -r FILE
 do
     echo "Deleting file: $FILE"
-done < $FILES_TO_DELETE
+done <<< $FILES_TO_DELETE
