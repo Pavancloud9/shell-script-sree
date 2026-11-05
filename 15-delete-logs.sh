@@ -1,6 +1,6 @@
 #/bin/bash
 
-SOURCE_DIR=$@
+SOURCE_DIR=$1
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 
