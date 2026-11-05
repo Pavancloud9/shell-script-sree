@@ -14,7 +14,7 @@ else
 fi
 }
 
-for INSTALL_SOFTWARE in $@
+for INSTALL_SOFTWARE in $@  ## $@ ante arguments lo ichinavi anni loop lo ki vachestay ()
 do
     dnf list installed $INSTALL_SOFTWARE
     if [ $? -ne 0 ]
