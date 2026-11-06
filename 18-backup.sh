@@ -35,6 +35,7 @@ then
     echo "Zip file created successfully"
 else
     echo "Failed to create zip file"
+fi
 else
     echo "No files to zip"
 fi
