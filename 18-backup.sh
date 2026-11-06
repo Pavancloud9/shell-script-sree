@@ -33,9 +33,17 @@ then
     if [ $? -eq 0 ]
 then
     echo "Zip file created successfully"
+
+    while read -r FILE
+    do
+        echo "Files to be deleted are: $FILE"
+        # rm -rf $FILE
+        # echo "Files deleted are: $FILE"
+    done <<< $FILES
 else
     echo "Failed to create zip file"
 fi
 else
     echo "No files to zip"
 fi
+
