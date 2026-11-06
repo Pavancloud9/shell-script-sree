@@ -57,9 +57,3 @@ else
 fi
     echo "No files found to zip"
 fi
-
-
-
-
-
-
