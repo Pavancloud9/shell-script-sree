@@ -13,6 +13,7 @@ DAYS=${3:- 14}
 
 USAGE(){
     echo: "USAGE:: 17-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>optional"
+    exit 1
 }
 
 if [ $# -lt 2 ]
