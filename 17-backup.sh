@@ -55,5 +55,6 @@ else
     echo "Failed to create zip file"
     exit 1
 fi
+else
     echo "No files found to zip"
 fi
