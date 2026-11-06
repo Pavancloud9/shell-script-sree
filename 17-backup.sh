@@ -46,7 +46,7 @@ then
 
     while read -r FILES
     do
-        echo "Files to be deleted are:: $FILES
+        echo "Files to be deleted are:: $FILES"
         # rm -rf $FILES
         # echo "deleted file: $FILES"
     done < $FILES
