@@ -10,3 +10,22 @@ then
     exit 1
 fi
 
+if [ ! -d $SOURCE_DIR ]
+then
+    echo "$SOURCE_DIR does not exists...pls check"
+    exit 1
+fi
+
+if [ ! -d $DEST_DIR ]
+then
+    echo "$DEST_DIR does not exists...pls check"
+    exit 1
+fi
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+
+if [ -n "$FILES" ]
+then
+    echo "Files are:: $FILES"
+else
+    echo "No files to zip"
