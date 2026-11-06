@@ -10,3 +10,4 @@ while read -r FILE
 do
     echo "Deleting file: $FILE"
 done <<< $FILES_TO_DELETE
+
