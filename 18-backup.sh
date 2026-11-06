@@ -3,6 +3,7 @@
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS="${3:-14}"
+TIMESTAMP=$(date "+%Y-%m-%d_%H:%M:%S")
 
 if [ $# -lt 2 ]
 then
