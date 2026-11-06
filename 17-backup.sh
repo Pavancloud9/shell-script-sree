@@ -49,7 +49,7 @@ then
         echo "Files to be deleted are:: $FILES"
         # rm -rf $FILES
         # echo "deleted file: $FILES"
-    done < $FILES
+    done <<< $FILES
 
 else
     echo "Failed to create zip file"
