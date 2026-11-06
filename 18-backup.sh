@@ -29,3 +29,4 @@ then
     echo "Files are:: $FILES"
 else
     echo "No files to zip"
+fi
