@@ -30,6 +30,11 @@ then
     echo "Files are:: $FILES"
     ZIP_FILE="$DEST_DIR/application-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+    if [ $? -eq 0 ]
+then
+    echo "Zip file created successfully"
+else
+    echo "Failed to create zip file"
 else
     echo "No files to zip"
 fi
