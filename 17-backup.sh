@@ -38,10 +38,24 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 if [ -n "$FILES" ]
 then
     echo "Files are:: $FILES"
-    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
+    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"  #### ZIP FILE NAME
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+    if [ -f $ZIP_FILE ]
+then
+    echo "zip file created successfully"
+
+    while read -r FILES
+    do
+        echo "Files to be deleted are:: $FILES
+        # rm -rf $FILES
+        # echo "deleted file: $FILES"
+    done < $FILES
+
 else
-    echo "No files to zip"
+    echo "Failed to create zip file"
+    exit 1
+fi
+    echo "No files found to zip"
 fi
 
 
